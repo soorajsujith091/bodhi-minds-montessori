@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Bodhi Minds Montessori</title>
+  <meta name="description" content="Get in touch with Bodhi Minds Montessori. Visit us in Bengaluru, call, email, or fill out our contact form. We'd love to hear from you.">
+  <meta property="og:title" content="Contact — Bodhi Minds Montessori">
+  <meta property="og:description" content="Reach out to Bodhi Minds Montessori. Schedule a tour, ask a question, or visit our campus in Bengaluru.">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- LocalBusiness JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bodhi Minds Montessori",
+    "description": "AMI-certified Montessori school offering Toddler, Preschool, Kindergarten, and After School programs.",
+    "url": "https://bodhiminds.edu",
+    "telephone": "+911234567890",
+    "email": "hello@bodhiminds.edu",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Green Valley Road",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "12.9716",
+      "longitude": "77.5946"
+    },
+    "openingHours": ["Mo-Fr 08:30-16:00"],
+    "priceRange": "₹₹"
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-nav" role="banner"><nav class="nav-inner" aria-label="Main navigation"><a href="index.html" class="nav-logo">bodhi<span>minds</span></a><div class="nav-links"><a href="about.html">About</a><a href="programs.html">Programs</a><a href="admissions.html">Admissions</a><a href="campus.html">Campus</a><a href="events.html">Events</a><a href="contact.html">Contact</a></div><a href="admissions.html" class="btn btn-ghost nav-cta">Book a Tour</a><div class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></div></nav></header>
+  <div class="mobile-drawer" role="dialog" aria-label="Mobile menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">Programs</a><a href="admissions.html">Admissions</a><a href="campus.html">Campus</a><a href="events.html">Events</a><a href="contact.html">Contact</a><a href="admissions.html" class="btn btn-filled" style="margin-top:16px">Book a Tour</a></div>
+
+  <main>
+    <!-- INTRO -->
+    <section class="section page-intro" aria-label="Page introduction">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Home</a> / Contact</p>
+        <h1 data-reveal>Let's talk.</h1>
+      </div>
+    </section>
+
+    <!-- CONTACT LAYOUT -->
+    <section class="section" aria-label="Contact information and form" style="padding-top:40px">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- LEFT: Info Cards -->
+          <div data-reveal>
+            <div class="contact-cards" data-stagger>
+              <div class="card contact-card float-7">
+                <div class="icon">☎</div>
+                <div class="info"><span>Phone</span>+91 123 456 7890</div>
+              </div>
+              <div class="card contact-card float-8 float-delay-1">
+                <div class="icon">✉</div>
+                <div class="info"><span>Email</span>hello@bodhiminds.edu</div>
+              </div>
+              <div class="card contact-card float-9 float-delay-2">
+                <div class="icon">◉</div>
+                <div class="info"><span>Address</span>123 Green Valley Road,<br>Bengaluru, Karnataka 560001</div>
+              </div>
+              <div class="card contact-card float-10 float-delay-3">
+                <div class="icon">◷</div>
+                <div class="info"><span>Office hours</span>Mon – Fri, 8:30 AM – 4:00 PM</div>
+              </div>
+            </div>
+            <div class="social-row" style="margin-top:24px">
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="#" aria-label="Instagram">ig</a>
+              <a href="#" aria-label="LinkedIn">in</a>
+              <a href="#" aria-label="YouTube">yt</a>
+            </div>
+          </div>
+
+          <!-- RIGHT: Form -->
+          <div data-reveal data-reveal-delay="0.15">
+            <form id="contact-form">
+              <div class="form-group"><label for="c-name">Your name</label><input type="text" id="c-name" required placeholder="Full name"></div>
+              <div class="form-group"><label for="c-email">Email address</label><input type="email" id="c-email" required placeholder="you@example.com"></div>
+              <div class="form-group"><label for="c-phone">Phone number</label><input type="tel" id="c-phone" placeholder="+91 (optional)"></div>
+              <div class="form-group"><label for="c-subject">Subject</label>
+                <select id="c-subject" required style="padding:12px 0;border-bottom:1px solid var(--divider);width:100%;background:transparent;cursor:pointer">
+                  <option value="">Select a topic</option>
+                  <option>General enquiry</option>
+                  <option>Admissions</option>
+                  <option>Campus tour</option>
+                  <option>Programs</option>
+                  <option>Partnership</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group"><label for="c-message">Message</label><textarea id="c-message" required placeholder="How can we help?" rows="4"></textarea></div>
+              <button type="submit" class="btn btn-filled" style="width:100%">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <div class="map-container" aria-label="Campus location map">
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=77.58%2C12.96%2C77.61%2C12.98&layer=mapnik" allowfullscreen loading="lazy" title="Bodhi Minds Montessori location map"></iframe>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-col"><a href="index.html" class="nav-logo" style="color:#fff">bodhi<span>minds</span></a><p class="footer-tagline">Nurturing curiosity, independence, and a lifelong love of learning.</p><div class="footer-socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="LinkedIn">in</a></div></div>
+      <div class="footer-col"><h4>Quick links</h4><a href="about.html">About us</a><a href="programs.html">Programs</a><a href="admissions.html">Admissions</a><a href="campus.html">Campus</a><a href="events.html">Events</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h4>Programs</h4><a href="programs.html#toddler">Toddler community</a><a href="programs.html#preschool">Primary preschool</a><a href="programs.html#kindergarten">Kindergarten</a><a href="programs.html#afterschool">After school</a></div>
+      <div class="footer-col"><h4>Contact</h4><a href="tel:+911234567890">+91 123 456 7890</a><a href="mailto:hello@bodhiminds.edu">hello@bodhiminds.edu</a><a>123 Green Valley Road,<br>Bengaluru, India 560001</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Bodhi Minds Montessori. All rights reserved.</span><div><a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a></div></div>
+  </footer>
+
+  <a href="admissions.html" class="btn btn-green fab" id="fab-tour">Book a Tour</a>
+  <script src="js/main.js"></script>
+</body>
+</html>
