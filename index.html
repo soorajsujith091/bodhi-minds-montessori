@@ -3,20 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bodhi Minds Montessori — Where Every Child Finds Their Way</title>
-  <meta name="description" content="Bodhi Minds Montessori offers child-led education through our Toddler, Preschool, and Kindergarten programs. Discover a school that breathes at the child's pace.">
-  <meta property="og:title" content="Bodhi Minds Montessori — Where Every Child Finds Their Way">
-  <meta property="og:description" content="Child-led Montessori education in a nature-integrated, prepared environment. AMI certified educators nurturing every child's unique path.">
-  <meta property="og:type" content="website">
+  <title>Bodhi Minds Montessori — Where Every Child Blooms</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Bodhi Minds Montessori — A nature-integrated, child-led Montessori school in Canada. AMI-certified educators. Toddler, Preschool & Kindergarten programs.">
+  <meta property="og:title" content="Bodhi Minds Montessori — Where Every Child Blooms">
+  <meta property="og:description" content="Discover Montessori education rooted in curiosity, nature, and independence. Serving families in Canada.">
+  <meta property="og:image" content="images/blog_event1.png">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bodhi-minds-montessori.vercel.app/">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- LocalBusiness + EducationalOrganization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://bodhi-minds-montessori.vercel.app/#organization",
+        "name": "Bodhi Minds Montessori",
+        "url": "https://bodhi-minds-montessori.vercel.app/",
+        "logo": "https://bodhi-minds-montessori.vercel.app/images/hero_child.png",
+        "sameAs": [
+          "https://www.facebook.com/bodhimindsmontessori",
+          "https://www.instagram.com/bodhimindsmontessori"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://bodhi-minds-montessori.vercel.app/#localbusiness",
+        "name": "Bodhi Minds Montessori",
+        "image": "https://bodhi-minds-montessori.vercel.app/images/hero_child.png",
+        "telephone": "+1 (905) 555-0173",
+        "email": "hello@bodhiminds.edu",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Willow Creek Lane",
+          "addressLocality": "Oakville",
+          "addressRegion": "ON",
+          "postalCode": "L6H 0A1",
+          "addressCountry": "CA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "43.4675",
+          "longitude": "-79.6877"
+        },
+        "url": "https://bodhi-minds-montessori.vercel.app/",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:30",
+          "closes": "16:00"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- STICKY NAVBAR -->
   <header class="site-nav" role="banner">
     <nav class="nav-inner" aria-label="Main navigation">
-      <a href="index.html" class="nav-logo">bodhi<span>minds</span></a>
+      <a href="index.html" class="nav-logo"><img src="images/Screenshot 2026-05-21 191802.png" alt="Bodhi Minds Montessori Logo"></a>
       <div class="nav-links">
         <a href="about.html">About</a>
         <a href="programs.html">Programs</a>
@@ -25,189 +85,398 @@
         <a href="events.html">Events</a>
         <a href="contact.html">Contact</a>
       </div>
-      <a href="admissions.html" class="btn btn-ghost nav-cta">Book a Tour</a>
+      <a href="contact.html" class="btn nav-cta">Enquire Now</a>
       <div class="nav-hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </nav>
   </header>
 
   <!-- MOBILE DRAWER -->
+  <div class="mobile-overlay" aria-hidden="true"></div>
   <div class="mobile-drawer" role="dialog" aria-label="Mobile menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="programs.html">Programs</a>
-    <a href="admissions.html">Admissions</a>
-    <a href="campus.html">Campus</a>
-    <a href="events.html">Events</a>
-    <a href="contact.html">Contact</a>
-    <a href="admissions.html" class="btn btn-filled" style="margin-top:16px">Book a Tour</a>
+    <div class="mobile-drawer-header">
+      <span class="mobile-drawer-logo"><img src="images/Screenshot 2026-05-21 191802.png" alt="Logo"></span>
+      <span class="mobile-drawer-close" aria-label="Close menu">&times;</span>
+    </div>
+    <div class="mobile-drawer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="campus.html">Campus</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn-primary" style="margin-top: 24px; width: 100%;">Enquire Now</a>
   </div>
 
   <main>
-    <!-- HERO -->
+    <!-- SECTION 1: HERO -->
     <section class="hero" aria-label="Hero">
+      <!-- Subtle SVG organic shape in top-right -->
+      <svg class="hero-svg-bg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M45.7,-64.3C57.9,-58.2,65.6,-42.9,71.2,-27.1C76.9,-11.3,80.4,5,76.5,19.3C72.6,33.5,61.2,45.8,48.2,55.8C35.2,65.8,20.5,73.5,4.7,72.9C-11.2,72.3,-22.4,63.3,-34.5,53.8C-46.7,44.2,-59.8,34.1,-67.2,20.2C-74.6,6.3,-76.3,-11.4,-70.7,-25.9C-65.1,-40.4,-52.3,-51.7,-38.7,-57.2C-25.1,-62.7,-10.7,-62.4,3.2,-66.7C17.1,-71,33.5,-70.3,45.7,-64.3Z" transform="translate(100 100)" />
+      </svg>
       <div class="hero-inner">
-        <div class="hero-text" data-reveal>
-          <span class="pill-badge pill-badge-green hero-badge">Montessori Education</span>
-          <h1>Where every child<br>finds their <em>way.</em></h1>
-          <p class="hero-desc">A nurturing Montessori environment where curiosity leads, nature inspires, and every child discovers the joy of learning at their own pace.</p>
+        <div class="hero-text animate-on-scroll">
+          <span class="eyebrow">Inspiring First Excellence</span>
+          <h1>Where Every Child <span class="italic-accent">Blooms</span> at Their Own Pace</h1>
+          <p class="hero-desc">Our Montessori environment is meticulously prepared to nurture curiosity, independence, and a lifelong love for learning through hands-on discovery.</p>
           <div class="hero-buttons">
-            <a href="programs.html" class="btn btn-filled">Explore Programs</a>
-            <a href="admissions.html" class="btn btn-ghost">Book a Tour</a>
+            <a href="admissions.html" class="btn btn-primary">Start the Journey</a>
+            <a href="about.html" class="btn btn-outline">Our Philosophy</a>
           </div>
         </div>
-        <div class="hero-image" data-reveal data-reveal-delay="0.3">
-          <img src="images/hero_child.png" alt="Child engaged in Montessori learning with wooden materials" class="float-8">
+        <div class="hero-image-wrapper animate-on-scroll">
+          <img src="images/hero_child.png" alt="A young child exploring wooden sorting toys in a warm Montessori classroom setting" class="img-hero">
+          <div class="hero-stat-card">
+            15+ Years of Excellence | 200+ Happy Children in Education
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- HERO STATS -->
-    <div class="hero-stats" data-stagger>
-      <div class="stat-chip float-6">200+ Students</div>
-      <div class="stat-chip float-7 float-delay-1">15 Educators</div>
-      <div class="stat-chip float-8 float-delay-2">3 Programs</div>
-      <div class="stat-chip float-9 float-delay-3">98% Satisfaction</div>
+    <!-- Trust Bar below hero -->
+    <div class="trust-bar animate-on-scroll">
+      <div class="trust-inner">
+        <div class="trust-item">
+          <div class="trust-number">140+</div>
+          <div class="trust-label">Happy Students</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">1:8</div>
+          <div class="trust-label">Teacher Ratio</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">2 Acres</div>
+          <div class="trust-label">Outdoor Campus</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">AMI</div>
+          <div class="trust-label">Certified Program</div>
+        </div>
+      </div>
     </div>
 
-    <!-- MARQUEE -->
-    <div class="marquee-strip" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Child-Led · Curiosity First · Prepared Environments · Nature Integrated · AMI Certified ·</span>
-        <span>Child-Led · Curiosity First · Prepared Environments · Nature Integrated · AMI Certified ·</span>
-        <span>Child-Led · Curiosity First · Prepared Environments · Nature Integrated · AMI Certified ·</span>
-        <span>Child-Led · Curiosity First · Prepared Environments · Nature Integrated · AMI Certified ·</span>
-      </div>
-    </div>
-
-    <!-- ABOUT PREVIEW -->
-    <section class="section" aria-label="About preview">
+    <!-- SECTION 2: ABOUT -->
+    <section class="section section-alt" aria-label="About our approach">
       <div class="container">
-        <div class="about-preview">
-          <div data-reveal>
-            <h2>A school that breathes at the child's pace.</h2>
-            <span class="accent-dash"></span>
-            <p class="body-lg" style="color:var(--muted)">At Bodhi Minds, we believe education begins with observation. Our AMI-certified guides follow each child's natural development, creating an environment where independence, concentration, and a love of learning flourish organically.</p>
-            <p class="body-lg" style="color:var(--muted);margin-bottom:28px">Founded on the principles of Dr. Maria Montessori, our school integrates nature, community, and purposeful work into every moment of the child's day.</p>
-            <a href="about.html" class="btn btn-ghost">Our Story</a>
+        <div class="about-split">
+          <div class="about-image animate-on-scroll">
+            <img src="images/about_overlap1.png" alt="Montessori kids circle time learning together in a bright outdoor environment" class="img-cover">
           </div>
-          <div class="about-preview-images" data-reveal data-reveal-delay="0.2">
-            <img src="images/about_overlap1.png" alt="Children exploring nature in the school garden" class="float-7 img-hover">
-            <img src="images/about_overlap2.png" alt="Child hands working with Montessori sensorial materials" class="float-10 float-delay-2 img-hover">
+          <div class="about-text animate-on-scroll">
+            <span class="eyebrow">Our Approach</span>
+            <h2>A Place Where <span class="italic-accent">Curiosity</span> Leads</h2>
+            <p>At Bodhi Minds, we believe education is not the filling of a bucket, but the lighting of a fire. Guided by the Montessori philosophy, we offer meticulously prepared environments where child-led exploration sparks genuine passion, natural self-discipline, and enduring intellectual growth.</p>
+            <div class="bullets-list">
+              <div class="check-item">
+                <span class="check-icon">✓</span>
+                <span>Child-led curriculum and pacing</span>
+              </div>
+              <div class="check-item">
+                <span class="check-icon">✓</span>
+                <span>Multi-age classrooms for peer-to-peer learning</span>
+              </div>
+              <div class="check-item">
+                <span class="check-icon">✓</span>
+                <span>Focus on social and emotional intelligence</span>
+              </div>
+            </div>
+            <a href="about.html" class="cta-text-link">Explore Our Approach →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROGRAMS -->
-    <section class="section" aria-label="Programs">
+    <!-- SECTION 3: PROGRAMS -->
+    <section class="section" aria-label="Our learning programs">
       <div class="container text-center">
-        <h2 data-reveal>Our three paths of learning.</h2>
-        <p class="body-lg text-muted" data-reveal data-reveal-delay="0.1">Each program is tailored to the developmental stage of the child.</p>
-        <div class="programs-grid" data-stagger>
-          <div class="card program-card float-7">
-            <div class="monogram">T</div>
-            <h3>Toddler community</h3>
-            <span class="pill-badge pill-badge-outline age-badge">18 months – 3 years</span>
-            <p>A gentle introduction to independence through practical life activities, sensory exploration, and language-rich interactions in a prepared environment.</p>
-            <a href="programs.html#toddler" class="learn-more">Learn more →</a>
+        <span class="eyebrow animate-on-scroll">Our Learning Levels</span>
+        <h2 class="animate-on-scroll mb-24">Tailored environments designed for specific developmental stages</h2>
+        <div class="programs-tabs animate-on-scroll">
+          
+          <!-- Toddler Nest -->
+          <div class="program-card">
+            <div class="icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 5-11.8L12 5V2m0 3a3 3 0 0 0-3 3v2m6 0a3 3 0 0 1-3 3h-3"/></svg>
+            </div>
+            <h3>Toddler Nest</h3>
+            <div class="age-range">Ages 18 months – 3 years</div>
+            <p>Focuses on language acquisition, motor skill coordination, and practical life skills in a cozy, secure space.</p>
+            <a href="programs.html#toddler" class="btn btn-outline-green">Learn More</a>
           </div>
-          <div class="card program-card float-8 float-delay-1">
-            <div class="monogram">P</div>
-            <h3>Primary preschool</h3>
-            <span class="pill-badge pill-badge-outline age-badge">3 – 6 years</span>
-            <p>The heart of Montessori education. Children work across five curriculum areas: practical life, sensorial, mathematics, language, and cultural studies.</p>
-            <a href="programs.html#preschool" class="learn-more">Learn more →</a>
+
+          <!-- Thriving Garden (Default Active) -->
+          <div class="program-card active">
+            <div class="icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c-2-2.67-4-4-6-4 0 4 4 6 6 6m0-2c2-2.67 4-4 6-4 0 4-4 6-6 6m0 6V12"/></svg>
+            </div>
+            <h3>Thriving Garden</h3>
+            <div class="age-range">Ages 3 – 6 years</div>
+            <p>Integrating mathematics, sensorial exploration, and cultural studies through purposeful play.</p>
+            <a href="programs.html#preschool" class="btn btn-outline-white">Learn More</a>
           </div>
-          <div class="card program-card float-9 float-delay-2">
-            <div class="monogram">K</div>
-            <h3>Kindergarten</h3>
-            <span class="pill-badge pill-badge-outline age-badge">5 – 6 years</span>
-            <p>The culminating year where children synthesize their learning, develop leadership skills, and prepare for their next educational journey with confidence.</p>
-            <a href="programs.html#kindergarten" class="learn-more">Learn more →</a>
+
+          <!-- Cosmic Education -->
+          <div class="program-card">
+            <div class="icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3>Cosmic Education</h3>
+            <div class="age-range">Primary 6 – 9 years</div>
+            <p>Expanding horizons through scientific inquiry, complex social cooperation, and creative arts.</p>
+            <a href="programs.html#kindergarten" class="btn btn-outline-green">Learn More</a>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- WHY US -->
-    <section class="section section-dark" aria-label="Why choose us">
-      <div class="container text-center">
-        <h2 data-reveal>Designed around the child,<br>not the curriculum.</h2>
-        <div class="why-grid" data-stagger>
-          <div class="why-card float-7">
-            <div class="icon">⟡</div>
-            <h3>Low ratios</h3>
-            <p>Maximum 8:1 student-to-teacher ratio ensures every child receives individualized attention and support throughout their day.</p>
-          </div>
-          <div class="why-card float-8 float-delay-1">
-            <div class="icon">✦</div>
-            <h3>AMI trained</h3>
-            <p>All lead guides hold internationally recognized AMI diplomas, bringing deep expertise in Montessori philosophy and methodology.</p>
-          </div>
-          <div class="why-card float-9 float-delay-2">
-            <div class="icon">❋</div>
-            <h3>Nature spaces</h3>
-            <p>Our campus integrates outdoor learning gardens, forest trails, and sensory nature paths into the daily curriculum and exploration.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="section" aria-label="Testimonials">
-      <div class="container text-center">
-        <h2 data-reveal>What parents say.</h2>
-        <div class="testimonials-grid" data-stagger>
-          <div class="card quote-card float-7">
-            <div class="quote-mark">"</div>
-            <blockquote>Our daughter transformed from a shy toddler into a confident, curious learner. Bodhi Minds gave her wings.</blockquote>
-            <span class="parent-name">— Priya M., parent since 2022</span>
-          </div>
-          <div class="card quote-card float-8 float-delay-1">
-            <div class="quote-mark">"</div>
-            <blockquote>The teachers don't just teach — they observe, guide, and genuinely understand each child's unique rhythm.</blockquote>
-            <span class="parent-name">— Arjun & Meera K., parents since 2021</span>
-          </div>
-          <div class="card quote-card float-9 float-delay-2">
-            <div class="quote-mark">"</div>
-            <blockquote>We visited ten schools before finding Bodhi Minds. The calm, purposeful environment spoke for itself.</blockquote>
-            <span class="parent-name">— Sarah L., parent since 2023</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ADMISSIONS CTA -->
-    <section class="section" aria-label="Call to action">
+    <!-- SECTION 4: WHY CHOOSE US -->
+    <section class="section section-alt" aria-label="Why choose Bodhi Minds">
       <div class="container">
-        <div class="cta-card float-10" data-reveal>
-          <h2>Ready to begin?</h2>
-          <p class="body-lg text-muted">Schedule a visit to experience the Bodhi Minds difference firsthand. We'd love to show you around.</p>
-          <div class="cta-buttons">
-            <a href="admissions.html" class="btn btn-filled">Apply Now</a>
-            <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+        <div class="why-split">
+          <div class="animate-on-scroll">
+            <span class="eyebrow">The Difference</span>
+            <h2 class="mb-24">The Bodhi Minds <span class="italic-accent">Difference</span></h2>
+            <p class="text-muted mb-24" style="font-size: 16px;">We provide more than just child care; we provide a foundation for a flourishing life. Our features are designed around the child's natural instincts.</p>
+            <div class="why-images">
+              <div class="why-img-1">
+                <img src="images/classroom_main.png" alt="Prepared classroom shelves featuring wooden cylinders and sensorial Montessori toys" class="img-cover">
+              </div>
+              <div class="why-img-2">
+                <img src="images/about_overlap2.png" alt="A child carefully pouring water from a small glass pitcher, developing motor skills" class="img-cover">
+              </div>
+            </div>
           </div>
+          <div class="features-grid animate-on-scroll">
+            
+            <div class="feature-tile">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8m-4-4v8"/></svg>
+              </div>
+              <h4>Organic Nutrition</h4>
+              <p>Daily nutrient-dense organic meals sourced from local sustainable farms.</p>
+            </div>
+
+            <div class="feature-tile">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 22s1-2 4-2 4 2 6 2 4-2 6-2 4 2 4 2V3s-1 2-4 2-4-2-6-2-4 2-6 2-4-2-4-2z"/></svg>
+              </div>
+              <h4>Outdoor Discovery</h4>
+              <p>Active learning outdoors with nature gardens, trails, and farm elements.</p>
+            </div>
+
+            <div class="feature-tile">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v8m-4-4h8"/></svg>
+              </div>
+              <h4>Art & Enrichment</h4>
+              <p>Integrating fine arts, pottery, music, and physical expression daily.</p>
+            </div>
+
+            <div class="feature-tile">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <h4>Bilingual Immersion</h4>
+              <p>Dual-language exposure woven into natural classroom settings.</p>
+            </div>
+
+            <div class="feature-tile">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h4>Family Community</h4>
+              <p>Regular parent workshops, events, and family volunteer support.</p>
+            </div>
+
+            <div class="feature-tile">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h4>Safe Haven</h4>
+              <p>Top-tier security protocols, childproofing, and emotional safety support.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: CAMPUS GALLERY -->
+    <section class="section" aria-label="Magical campus gallery">
+      <div class="container">
+        <div class="text-center animate-on-scroll">
+          <span class="eyebrow">Our Magical Campus</span>
+          <h2 class="mb-24">Environments Prepared for Wonder</h2>
+        </div>
+        <div class="bento-grid animate-on-scroll">
+          <div class="bento-item bento-large">
+            <img src="images/campus_outdoor.png" alt="Beautiful forested outdoor campus grounds of Bodhi Minds Montessori school" loading="lazy">
+          </div>
+          <div class="bento-item">
+            <img src="images/classroom_main.png" alt="Neatly organized Montessori shelves with beautiful wooden materials" loading="lazy">
+          </div>
+          <div class="bento-item">
+            <img src="images/campus_library.png" alt="Cozy reading nook with small wooden table, bookshelves and plants" loading="lazy">
+          </div>
+          <div class="bento-item">
+            <img src="images/campus_garden.png" alt="A child learning gardening in our lush green outdoor beds" loading="lazy">
+          </div>
+          <div class="bento-item">
+            <img src="images/campus_artroom.png" alt="Bright and spacious art studio with paint easels and canvases" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: TESTIMONIALS -->
+    <section class="section section-warm" aria-label="Parent Testimonials">
+      <div class="container">
+        <div class="text-center animate-on-scroll">
+          <span class="eyebrow">Voices From Our Village</span>
+          <h2 class="mb-24">What Our Community Says</h2>
+        </div>
+        <div class="testimonials-grid animate-on-scroll">
+          
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">"We've observed a radical shift in our son's confidence level. He handles everyday challenges at home with concentration and deep focus."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SM</div>
+              <div class="author-info">
+                <h4>Sarah & Mark M.</h4>
+                <span>Primary Toddler Parents</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">"The connection the guides form with children is exceptional. Our daughter is excited to go to school every single morning."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AK</div>
+              <div class="author-info">
+                <h4>Arjun K.</h4>
+                <span>Preschool Parent</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">"We visited several standard daycares before finding Bodhi Minds. The tranquil, child-centered atmosphere stood out immediately."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">DL</div>
+              <div class="author-info">
+                <h4>Dr. Linda L.</h4>
+                <span>Toddler & Primary Parent</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: CTA BANNER -->
+    <section class="section" aria-label="Get started today">
+      <div class="cta-banner-wrapper">
+        <div class="cta-banner animate-on-scroll">
+          <h2>Ready to let them <span style="font-style: italic; color: #C8D8A0;">bloom</span>?</h2>
+          <p>Schedule a visit to see our beautifully prepared environments and experience the warmth of our community firsthand.</p>
+          <div class="cta-banner-buttons">
+            <a href="contact.html" class="btn btn-gold">Contact Us</a>
+            <a href="admissions.html" class="btn btn-outline-white">Apply Online</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: BLOG -->
+    <section class="section section-alt" aria-label="Latest blog articles">
+      <div class="container">
+        <div class="blog-header animate-on-scroll">
+          <div>
+            <span class="eyebrow">The Bodhi Blog</span>
+            <h2>Latest Insights & Stories</h2>
+          </div>
+          <a href="events.html" class="cta-text-link">View All Stories →</a>
+        </div>
+        <div class="blog-grid animate-on-scroll">
+          
+          <article class="card blog-card">
+            <div class="blog-card-img">
+              <img src="images/blog_event1.png" alt="Children doing creative crafts in class" loading="lazy">
+            </div>
+            <div class="blog-card-content">
+              <span class="eyebrow">Philosophy</span>
+              <h3><a href="events.html">The Power of the Prepared Environment</a></h3>
+              <p class="text-muted" style="font-size:14px; margin-bottom:12px;">Discover how physical classrooms guide self-directed learning and inner development.</p>
+              <span class="blog-date">May 12, 2026</span>
+            </div>
+          </article>
+
+          <article class="card blog-card">
+            <div class="blog-card-img">
+              <img src="images/blog_event2.png" alt="Hands-on Montessori materials close up" loading="lazy">
+            </div>
+            <div class="blog-card-content">
+              <span class="eyebrow">At Home</span>
+              <h3><a href="events.html">Bringing Montessori Practices Into Your Home</a></h3>
+              <p class="text-muted" style="font-size:14px; margin-bottom:12px;">Simple, actionable tips to arrange household items and foster independence at home.</p>
+              <span class="blog-date">April 24, 2026</span>
+            </div>
+          </article>
+
+          <article class="card blog-card">
+            <div class="blog-card-img">
+              <img src="images/campus_garden.png" alt="Kids learning outdoors in nature" loading="lazy">
+            </div>
+            <div class="blog-card-content">
+              <span class="eyebrow">Outdoors</span>
+              <h3><a href="events.html">Nature-Centered Learning: Farm-To-Table</a></h3>
+              <p class="text-muted" style="font-size:14px; margin-bottom:12px;">How gardening teaches children biology, responsibility, patience, and love for nature.</p>
+              <span class="blog-date">March 15, 2026</span>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
   </main>
 
+  <!-- LIGHTBOX -->
+  <div class="lightbox" role="dialog" aria-label="Image lightbox">
+    <span class="lightbox-close" aria-label="Close lightbox">×</span>
+    <img src="" alt="Enlarged gallery image">
+  </div>
+
   <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-grid">
       <div class="footer-col">
-        <a href="index.html" class="nav-logo" style="color:#fff">bodhi<span>minds</span></a>
+        <a href="index.html" class="footer-logo"><img src="images/Screenshot 2026-05-21 191802.png" alt="Bodhi Minds Montessori Logo"></a>
         <p class="footer-tagline">Nurturing curiosity, independence, and a lifelong love of learning.</p>
         <div class="footer-socials">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="Instagram">ig</a>
-          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>Quick links</h4>
+        <h4>Quick Links</h4>
         <a href="about.html">About us</a>
         <a href="programs.html">Programs</a>
         <a href="admissions.html">Admissions</a>
@@ -217,26 +486,24 @@
       </div>
       <div class="footer-col">
         <h4>Programs</h4>
-        <a href="programs.html#toddler">Toddler community</a>
-        <a href="programs.html#preschool">Primary preschool</a>
-        <a href="programs.html#kindergarten">Kindergarten</a>
-        <a href="programs.html#afterschool">After school</a>
+        <a href="programs.html#toddler">Toddler Nest</a>
+        <a href="programs.html#preschool">Thriving Garden</a>
+        <a href="programs.html#kindergarten">Cosmic Education</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="tel:+911234567890">+91 123 456 7890</a>
+        <a href="tel:+19055550173">+1 (905) 555-0173</a>
         <a href="mailto:hello@bodhiminds.edu">hello@bodhiminds.edu</a>
-        <a>123 Green Valley Road,<br>Bengaluru, India 560001</a>
+        <a>123 Willow Creek Lane,<br>Oakville, ON L6H 0A1</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Bodhi Minds Montessori. All rights reserved.</span>
-      <div><a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a></div>
+      <span>© 2026 Bodhi Minds Montessori. All rights reserved.</span>
+      <div>
+        <a href="#">Privacy</a> · <a href="#">Terms</a>
+      </div>
     </div>
   </footer>
-
-  <!-- FAB -->
-  <a href="admissions.html" class="btn btn-green fab" id="fab-tour">Book a Tour</a>
 
   <script src="js/main.js"></script>
 </body>

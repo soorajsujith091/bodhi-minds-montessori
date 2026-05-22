@@ -4,80 +4,63 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // === NAV SCROLL ===
-  const nav = document.querySelector('.site-nav');
-  if (nav) {
+  // === SCROLL FADE-UP ANIMATIONS ===
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('is-visible');
+        }, i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+
+  // === STICKY NAV SHADOW ON SCROLL ===
+  const header = document.querySelector('.site-nav');
+  if (header) {
     window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
+      header.classList.toggle('scrolled', window.scrollY > 20);
     });
   }
 
   // === MOBILE DRAWER ===
   const hamburger = document.querySelector('.nav-hamburger');
   const drawer = document.querySelector('.mobile-drawer');
-  if (hamburger && drawer) {
-    hamburger.addEventListener('click', () => {
-      drawer.classList.toggle('open');
-      document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
-    });
+  const overlay = document.querySelector('.mobile-overlay');
+  const closeBtn = document.querySelector('.mobile-drawer-close');
+
+  function openDrawer() {
+    if (drawer) drawer.classList.add('open');
+    if (overlay) overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    if (drawer) drawer.classList.remove('open');
+    if (overlay) overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (hamburger) {
+    hamburger.addEventListener('click', openDrawer);
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeDrawer);
+  }
+
+  if (overlay) {
+    overlay.addEventListener('click', closeDrawer);
+  }
+
+  if (drawer) {
     drawer.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        drawer.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
-  }
-
-  // === REVEAL ON SCROLL ===
-  const revealElements = document.querySelectorAll('[data-reveal]');
-  if (revealElements.length > 0) {
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const delay = el.dataset.revealDelay || 0;
-          setTimeout(() => {
-            el.classList.add('revealed');
-          }, parseFloat(delay) * 1000);
-          revealObserver.unobserve(el);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    revealElements.forEach(el => revealObserver.observe(el));
-  }
-
-  // === STAGGER CHILDREN REVEAL ===
-  const staggerGroups = document.querySelectorAll('[data-stagger]');
-  staggerGroups.forEach(group => {
-    const children = group.children;
-    Array.from(children).forEach((child, i) => {
-      child.setAttribute('data-reveal', '');
-      child.setAttribute('data-reveal-delay', (i * 0.12).toFixed(2));
-    });
-  });
-  // Re-observe staggered children
-  const allReveals = document.querySelectorAll('[data-reveal]:not(.revealed)');
-  if (allReveals.length > 0) {
-    const staggerObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const delay = el.dataset.revealDelay || 0;
-          setTimeout(() => {
-            el.classList.add('revealed');
-          }, parseFloat(delay) * 1000);
-          staggerObserver.unobserve(el);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    allReveals.forEach(el => staggerObserver.observe(el));
-  }
-
-  // === FAB (Book a Tour) ===
-  const fab = document.querySelector('.fab');
-  if (fab) {
-    window.addEventListener('scroll', () => {
-      fab.classList.toggle('visible', window.scrollY > 300);
+      link.addEventListener('click', closeDrawer);
     });
   }
 
@@ -99,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // === LIGHTBOX ===
   const lightbox = document.querySelector('.lightbox');
   const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
-  const galleryItems = document.querySelectorAll('.gallery-item img');
+  const galleryItems = document.querySelectorAll('.bento-item img, .gallery-grid img');
   
   if (lightbox && lightboxImg) {
     galleryItems.forEach(img => {
@@ -125,18 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // === SMOOTH SCROLL FOR ANCHOR LINKS ===
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
-  // === FORM HANDLING (prevent default) ===
+  // === FORM HANDLING ===
   document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -144,12 +116,28 @@ document.addEventListener('DOMContentLoaded', () => {
       if (btn) {
         const orig = btn.textContent;
         btn.textContent = 'Sent! ✓';
-        btn.style.backgroundColor = '#3B6D11';
+        btn.style.backgroundColor = '#3D6B4F';
+        btn.style.color = '#fff';
         setTimeout(() => {
           btn.textContent = orig;
           btn.style.backgroundColor = '';
+          btn.style.color = '';
           form.reset();
         }, 2000);
+      }
+    });
+  });
+
+  // === SMOOTH SCROLL FOR ANCHOR LINKS ===
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const targetId = anchor.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
     });
   });
