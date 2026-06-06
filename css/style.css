@@ -31,13 +31,13 @@
   align-items: center;
 }
 .nav-logo img {
-  height: 40px;
+  height: 56px;
   width: auto;
   object-fit: contain;
 }
 @media (min-width: 1025px) {
   .nav-logo img {
-    height: 56px;
+    height: 72px;
   }
 }
 .nav-links {
@@ -70,14 +70,9 @@
   color: var(--color-forest);
 }
 .nav-cta {
-  background: var(--color-forest);
-  color: #fff;
-  border-radius: 999px;
-  padding: 10px 22px;
-  font-size: 14px;
-}
-.nav-cta:hover {
-  background: var(--color-forest-dark);
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .nav-hamburger {
   display: none;
@@ -118,6 +113,8 @@
   width: 320px;
   max-width: 85vw;
   height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
   background: var(--color-surface);
   z-index: 1005;
   display: flex;
@@ -139,7 +136,7 @@
   padding-bottom: 16px;
 }
 .mobile-drawer-logo img {
-  height: 32px;
+  height: 48px;
   width: auto;
 }
 .mobile-drawer-close {
@@ -173,17 +170,19 @@
 }
 
 @media(max-width:768px){
-  .nav-links, .nav-cta { display: none; }
+  .nav-links, .nav-cta { display: none !important; }
   .nav-hamburger { display: flex; }
   .nav-inner { padding: 0 20px; }
 }
 
 /* === PAGE HERO BANNER === */
 .page-intro {
-  background: var(--color-badge-bg);
+  --hero-bg: url('../images/kid-learning-garden.jpg');
+  background: linear-gradient(rgba(250, 248, 245, 0.75), rgba(250, 248, 245, 0.75)), var(--hero-bg) center/cover no-repeat;
   padding: 80px 0;
   text-align: center;
   margin-top: var(--nav-height);
+  position: relative;
 }
 .breadcrumb {
   font-size: 13px;
@@ -416,7 +415,10 @@
   .hero-buttons { justify-content: center; }
   .hero-stat-card { left: 50%; transform: translateX(-50%); bottom: -20px; width: max-content; }
   .hero-image-wrapper { max-width: 480px; margin: 40px auto 0; }
-  .trust-inner { flex-direction: column; gap: 32px; }
+  .trust-inner { flex-direction: row; gap: 8px; justify-content: space-between; align-items: flex-start; }
+  .trust-item { padding: 0 4px; }
+  .trust-number { font-size: 20px; margin-bottom: 4px; }
+  .trust-label { font-size: 10px; line-height: 1.2; }
   .trust-item:not(:last-child)::after { display: none; }
 }
 
@@ -1015,6 +1017,16 @@
   }
   .about-split, .contact-split {
     padding: 0 16px;
+  }
+  .hero-buttons {
+    flex-wrap: nowrap;
+    gap: 8px;
+    width: 100%;
+  }
+  .hero-buttons .btn {
+    flex: 1;
+    padding: 12px 4px;
+    font-size: 13px;
   }
 }
 
